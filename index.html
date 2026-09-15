@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shan-e-Hyderabad | Fine Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-main: #12100E;
+            --bg-card: #1C1815;
+            --bronze-gold: #D4A359;
+            --bronze-light: #F0C987;
+            --text-white: #FAF6F0;
+            --text-dim: #A69D92;
+            --border-dark: #2D2620;
+            --pill-bg: rgba(28, 24, 21, 0.85);
+            --accent-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-white); -webkit-font-smoothing: antialiased; }
+
+        /* Navigation Bar */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 18px 20px; max-width: 800px; margin: 0 auto;
+            position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+        }
+        .brand-logo {
+            font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+            color: var(--bronze-gold); text-transform: uppercase; letter-spacing: 1px;
+        }
+        .nav-btn {
+            background: var(--pill-bg); border: 1px solid var(--border-dark); color: var(--text-white);
+            padding: 6px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+            text-decoration: none; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(5px);
+        }
+
+        /* Hero Section with Image Overlay */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 100px 20px 40px;
+            max-width: 800px; margin: 0 auto;
+            background: linear-gradient(180deg, rgba(18,16,14,0.4) 0%, rgba(18,16,14,0.85) 70%, #12100E 100%), 
+                        url('Image1.jpg') center/cover no-repeat;
+            border-bottom: 1px solid var(--border-dark);
+        }
+        
+        .welcome-badge {
+            display: inline-block; background: rgba(212, 163, 89, 0.15); border: 1px solid var(--bronze-gold);
+            color: var(--bronze-light); padding: 5px 14px; border-radius: 100px; font-size: 0.78rem;
+            margin-bottom: 14px; font-weight: 600; width: fit-content; backdrop-filter: blur(4px);
+        }
+
+        .location-subtitle {
+            color: var(--text-dim); font-size: 0.75rem; text-transform: uppercase;
+            letter-spacing: 2px; font-weight: 600; margin-bottom: 8px;
+        }
+
+        .hero-heading {
+            font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 700;
+            line-height: 1.2; margin-bottom: 12px; color: var(--text-white);
+        }
+        .hero-heading em { font-style: italic; color: var(--bronze-gold); font-weight: 600; }
+
+        .hero-desc {
+            color: var(--text-dim); font-size: 0.88rem; line-height: 1.5;
+            margin-bottom: 24px; max-width: 95%;
+        }
+
+        /* Compact CTA Buttons */
+        .cta-group { display: flex; gap: 10px; margin-bottom: 30px; }
+        
+        .btn-primary {
+            flex: 1; background: var(--bronze-gold); color: #12100E; padding: 12px 16px; border-radius: 100px;
+            font-weight: 700; text-align: center; text-decoration: none; font-size: 0.88rem;
+            box-shadow: 0 4px 15px rgba(212, 163, 89, 0.2); display: flex; align-items: center; justify-content: center;
+        }
+        
+        .btn-whatsapp {
+            flex: 1; background: var(--accent-green); color: #fff; padding: 12px 16px; border-radius: 100px;
+            font-weight: 700; text-align: center; text-decoration: none; font-size: 0.88rem;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+        }
+
+        /* Stats Bar */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+            padding: 16px 0; border-top: 1px solid var(--border-dark);
+        }
+        .stat-item { text-align: left; }
+        .stat-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--bronze-gold); font-weight: 700; }
+        .stat-label { font-size: 0.62rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+        /* Menu Styling */
+        .menu-container { max-width: 800px; margin: 0 auto; padding: 20px 20px 60px; }
+        .category-title {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--bronze-gold);
+            margin: 30px 0 16px; border-bottom: 1px solid var(--border-dark); padding-bottom: 8px;
+        }
+
+        .menu-card {
+            background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 12px;
+            padding: 14px 16px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .item-title { font-size: 0.92rem; font-weight: 600; color: var(--text-white); }
+        .item-price { font-family: 'Playfair Display', serif; font-size: 0.98rem; color: var(--bronze-gold); font-weight: 700; text-align: right; }
+
+        /* Footer Info */
+        .footer-card {
+            background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 16px;
+            padding: 20px; text-align: center; margin-top: 30px;
+        }
+        .footer-card h3 { font-family: 'Playfair Display', serif; color: var(--bronze-gold); margin-bottom: 6px; }
+        .footer-card p { color: var(--text-dim); font-size: 0.82rem; margin-bottom: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="brand-logo">Shan-E-Hyderabad</div>
+        <a href="https://maps.app.goo.gl/24XjUser53XAmp5i7" target="_blank" class="nav-btn">
+            <i class="fa-solid fa-location-dot" style="color: #e74c3c;"></i> Location
+        </a>
+    </nav>
+
+    <!-- Hero Area with Background Image Overlay -->
+    <div class="hero">
+        <div class="welcome-badge">Welcome to Shan-e-Hyderabad</div>
+        <div class="location-subtitle">Darbhanga • Royal Mughlai Cuisine</div>
+        
+        <h1 class="hero-heading">Royal Flavor. <br>Authentic <em>Mughlai.</em></h1>
+        
+        <p class="hero-desc">Experience rich Hyderabadi spices, slow-cooked gravies, and charcoal-grilled tandoori delicacies.</p>
+
+        <!-- Compact CTA Buttons -->
+        <div class="cta-group">
+            <a href="#full-menu" class="btn-primary">Explore Menu</a>
+            <a href="https://wa.me/?text=Hi%20Shan-e-Hyderabad,%20I%20want%20to%20place%20a%20direct%20order." class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Order WhatsApp
+            </a>
+        </div>
+
+        <!-- Metric Indicators -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-num">₹15</div>
+                <div class="stat-label">STARTING</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">40+</div>
+                <div class="stat-label">DELICACIES</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">4.7 ★</div>
+                <div class="stat-label">RATING</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu List -->
+    <div class="menu-container" id="full-menu">
+
+        <!-- House Specials -->
+        <div class="category-title">⭐ Chef's Specials</div>
+        <div class="menu-card"><span class="item-title">Shan-e-Hyderabadi Spl. Chicken Masala</span><span class="item-price">Half ₹345 / Full ₹660</span></div>
+        <div class="menu-card"><span class="item-title">Shan-e-Hyderabadi Spl. Mutton</span><span class="item-price">Half ₹390 / Full ₹760</span></div>
+        <div class="menu-card"><span class="item-title">Non-Veg Platter</span><span class="item-price">₹450</span></div>
+
+        <!-- Chicken Main Course -->
+        <div class="category-title">🍗 Chicken Main Course</div>
+        <div class="menu-card"><span class="item-title">Chicken Curry</span><span class="item-price">Half ₹140 / Full ₹249</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Masala</span><span class="item-price">Half ₹155 / Full ₹259</span></div>
+        <div class="menu-card"><span class="item-title">Kadai Chicken</span><span class="item-price">₹255</span></div>
+        <div class="menu-card"><span class="item-title">Butter Chicken</span><span class="item-price">₹299</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Punjabi</span><span class="item-price">₹299</span></div>
+        <div class="menu-card"><span class="item-title">Afghani Chicken</span><span class="item-price">₹299</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Tikka Masala</span><span class="item-price">₹289</span></div>
+        <div class="menu-card"><span class="item-title">Achari Chicken</span><span class="item-price">₹269</span></div>
+        <div class="menu-card"><span class="item-title">Lajawab Chicken</span><span class="item-price">₹250</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Mughlai</span><span class="item-price">₹260</span></div>
+
+        <!-- Tandoori & Tikka -->
+        <div class="category-title">🔥 Tandoori & Tikka</div>
+        <div class="menu-card"><span class="item-title">Chicken Tandoori</span><span class="item-price">Half ₹230 / Full ₹400</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Tikka (8pcs)</span><span class="item-price">₹249</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Malai Tikka (8pcs)</span><span class="item-price">₹259</span></div>
+        <div class="menu-card"><span class="item-title">Haryali Tikka (8pcs)</span><span class="item-price">₹279</span></div>
+        <div class="menu-card"><span class="item-title">Reshmi Tikka (8pcs)</span><span class="item-price">₹289</span></div>
+        <div class="menu-card"><span class="item-title">Kali Mirch Tikka (8pcs)</span><span class="item-price">₹259</span></div>
+        <div class="menu-card"><span class="item-title">Paneer Tikka (6pcs)</span><span class="item-price">₹280</span></div>
+
+        <!-- Kabab & Starters -->
+        <div class="category-title">🍢 Kababs & Starters</div>
+        <div class="menu-card"><span class="item-title">Tangdi Kabab</span><span class="item-price">2pc ₹159 / 4pc ₹299</span></div>
+        <div class="menu-card"><span class="item-title">Garlic Tangdi Kabab</span><span class="item-price">2pc ₹179 / 4pc ₹320</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Seekh Kabab</span><span class="item-price">Half ₹159 / Full ₹299</span></div>
+        <div class="menu-card"><span class="item-title">Chicken 65</span><span class="item-price">₹249</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Chilli</span><span class="item-price">₹249</span></div>
+        <div class="menu-card"><span class="item-title">Chicken Lollipop</span><span class="item-price">4pc ₹199 / 6pc ₹289</span></div>
+
+        <!-- Mutton Main Course -->
+        <div class="category-title">🥩 Mutton Main Course</div>
+        <div class="menu-card"><span class="item-title">Mutton Curry</span><span class="item-price">₹340</span></div>
+        <div class="menu-card"><span class="item-title">Mutton Masala</span><span class="item-price">₹350</span></div>
+        <div class="menu-card"><span class="item-title">Mutton Roghan Josh</span><span class="item-price">₹380</span></div>
+        <div class="menu-card"><span class="item-title">Mutton Kadai</span><span class="item-price">₹355</span></div>
+
+        <!-- Veg Specials -->
+        <div class="category-title">🥗 Veg Selection</div>
+        <div class="menu-card"><span class="item-title">Mix Veg</span><span class="item-price">₹170</span></div>
+        <div class="menu-card"><span class="item-title">Mix Veg Curry</span><span class="item-price">₹180</span></div>
+        <div class="menu-card"><span class="item-title">Gobhi Masala</span><span class="item-price">₹190</span></div>
+        <div class="menu-card"><span class="item-title">Shahi Paneer</span><span class="item-price">₹220</span></div>
+        <div class="menu-card"><span class="item-title">Paneer Butter Masala</span><span class="item-price">₹265</span></div>
+        <div class="menu-card"><span class="item-title">Masala Kadai Paneer</span><span class="item-price">₹220</span></div>
+        <div class="menu-card"><span class="item-title">Paneer Do Pyaza</span><span class="item-price">₹200</span></div>
+        <div class="menu-card"><span class="item-title">Paneer Chatpata</span><span class="item-price">₹230</span></div>
+        <div class="menu-card"><span class="item-title">Daal Fry</span><span class="item-price">₹120</span></div>
+        <div class="menu-card"><span class="item-title">Daal Tadka</span><span class="item-price">₹130</span></div>
+
+        <!-- Breads & Rice -->
+        <div class="category-title">🫓 Breads & Rice</div>
+        <div class="menu-card"><span class="item-title">Tandoori Roti</span><span class="item-price">₹15</span></div>
+        <div class="menu-card"><span class="item-title">Tandoori Butter Roti</span><span class="item-price">₹20</span></div>
+        <div class="menu-card"><span class="item-title">Tandoori Naan</span><span class="item-price">₹35</span></div>
+        <div class="menu-card"><span class="item-title">Butter Naan</span><span class="item-price">₹45</span></div>
+        <div class="menu-card"><span class="item-title">Paneer Naan</span><span class="item-price">₹60</span></div>
+        <div class="menu-card"><span class="item-title">Garlic Naan</span><span class="item-price">₹55</span></div>
+        <div class="menu-card"><span class="item-title">Steam Rice</span><span class="item-price">Half ₹50 / Full ₹90</span></div>
+        <div class="menu-card"><span class="item-title">Jeera Rice</span><span class="item-price">Half ₹60 / Full ₹100</span></div>
+        <div class="menu-card"><span class="item-title">Lemon Rice</span><span class="item-price">Half ₹60 / Full ₹100</span></div>
+        <div class="menu-card"><span class="item-title">Veg Schezwan Fried Rice</span><span class="item-price">₹160</span></div>
+
+        <!-- Footer Card -->
+        <div class="footer-card">
+            <h3>Shan-e-Hyderabad</h3>
+            <p>Darbhanga, Bihar • Fine Mughlai Dining</p>
+            <a href="https://maps.app.goo.gl/24XjUser53XAmp5i7" target="_blank" class="nav-btn" style="display: inline-flex;">
+                📍 Open in Google Maps
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
