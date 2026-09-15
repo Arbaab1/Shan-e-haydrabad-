@@ -6,24 +6,22 @@
     <title>Shan-e-Hyderabad | Royal Mughlai Dining</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --bg-deep: #050505;
-            --bg-card: rgba(18, 15, 12, 0.75);
-            --gold-primary: #E5C158;
-            --gold-light: #FFF0C3;
-            --gold-dark: #9A7B2C;
+            --bg-deep: #070605;
+            --bg-card: rgba(18, 14, 11, 0.85);
+            --gold-primary: #E6C280;
+            --gold-light: #FFF2D6;
+            --gold-dark: #A88238;
             --text-white: #FAF6F0;
-            --text-dim: #A8A195;
-            --border-luxury: rgba(229, 193, 88, 0.25);
-            --border-glow: rgba(229, 193, 88, 0.45);
-            --pill-bg: rgba(25, 20, 15, 0.85);
-            --accent-green: #25D366;
-            --accent-blue: #0A84FF;
-            --card-glow: 0px 10px 30px rgba(0, 0, 0, 0.8), 0px 0px 15px rgba(229, 193, 88, 0.05);
+            --text-dim: #B3AAA0;
+            --border-luxury: rgba(230, 194, 128, 0.22);
+            --border-glow: rgba(230, 194, 128, 0.5);
+            --pill-bg: rgba(25, 20, 15, 0.9);
+            --card-glow: 0px 10px 30px rgba(0, 0, 0, 0.85), 0px 0px 20px rgba(230, 194, 128, 0.05);
         }
 
         * {
@@ -37,50 +35,46 @@
             color: var(--text-white); 
             -webkit-font-smoothing: antialiased; 
             padding-bottom: 110px;
-            background-image: radial-gradient(circle at 50% 0%, rgba(229, 193, 88, 0.08) 0%, transparent 70%);
+            background-image: radial-gradient(circle at 50% 0%, rgba(230, 194, 128, 0.08) 0%, transparent 75%);
         }
 
-        /* Floating Top Navigation */
+        /* Top Bar */
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 16px 22px; max-width: 800px; margin: 0 auto;
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(16px);
+            background: rgba(7, 6, 5, 0.92); backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-luxury);
         }
 
         .brand-logo {
-            font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 900;
-            color: var(--gold-primary); text-transform: uppercase; letter-spacing: 1.5px;
-            background: linear-gradient(135deg, #FFF0C3 0%, #E5C158 50%, #9A7B2C 100%);
+            font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 800;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #FFF2D6 0%, #E6C280 50%, #A88238 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
         .nav-btn {
             background: var(--pill-bg); border: 1px solid var(--border-luxury); color: var(--text-white);
-            padding: 7px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
+            padding: 8px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
             text-decoration: none; display: flex; align-items: center; gap: 6px;
-            transition: all 0.3s ease;
         }
 
-        .nav-btn:active { transform: scale(0.95); }
-
-        /* Hero Section */
+        /* Hero */
         hero {
-            position: relative; min-height: 88vh;
+            position: relative; min-height: 80vh;
             display: flex; flex-direction: column; justify-content: flex-end;
-            padding: 130px 22px 40px; max-width: 800px; margin: 0 auto;
-            background: linear-gradient(180deg, rgba(5,5,5,0.2) 0%, rgba(5,5,5,0.85) 60%, #050505 100%),
+            padding: 120px 22px 35px; max-width: 800px; margin: 0 auto;
+            background: linear-gradient(180deg, rgba(7,6,5,0.2) 0%, rgba(7,6,5,0.92) 70%, #070605 100%),
                         url('Image1.jpg.png') center/cover no-repeat;
             border-bottom: 1px solid var(--border-luxury);
         }
 
         .welcome-badge {
             display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(229, 193, 88, 0.1); border: 1px solid var(--gold-primary);
+            background: rgba(230, 194, 128, 0.1); border: 1px solid var(--gold-primary);
             color: var(--gold-light); padding: 6px 14px; border-radius: 100px; font-size: 0.75rem;
             margin-bottom: 14px; font-weight: 600; width: fit-content; backdrop-filter: blur(8px);
-            box-shadow: 0 0 15px rgba(229, 193, 88, 0.15);
         }
 
         .location-subtitle {
@@ -89,30 +83,28 @@
         }
 
         .hero-heading {
-            font-family: 'Playfair Display', serif; font-size: 2.75rem; font-weight: 900;
-            line-height: 1.1; margin-bottom: 14px; color: var(--text-white);
-            letter-spacing: -0.5px;
+            font-family: 'Cinzel', serif; font-size: 2.5rem; font-weight: 800;
+            line-height: 1.15; margin-bottom: 14px; color: var(--text-white);
         }
 
         .hero-heading em { 
-            font-style: italic; font-weight: 700;
-            background: linear-gradient(135deg, #FFF0C3 0%, #E5C158 50%, #9A7B2C 100%);
+            font-style: normal;
+            background: linear-gradient(135deg, #FFF2D6 0%, #E6C280 50%, #A88238 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
         .hero-desc {
-            color: var(--text-dim); font-size: 0.92rem; line-height: 1.6;
+            color: var(--text-dim); font-size: 0.9rem; line-height: 1.6;
             margin-bottom: 26px; max-width: 95%; font-weight: 300;
         }
 
-        /* Hero Action Buttons */
-        .cta-group { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+        .cta-group { display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
 
         .btn-call {
             flex: 1; min-width: 140px; background: linear-gradient(135deg, #0A84FF 0%, #0056B3 100%);
             color: #FFFFFF; padding: 15px 18px; border-radius: 100px; font-weight: 700; text-align: center;
             text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; justify-content: center; gap: 8px;
-            box-shadow: 0 8px 20px rgba(10, 132, 255, 0.3); transition: all 0.2s ease;
+            box-shadow: 0 8px 20px rgba(10, 132, 255, 0.25);
         }
 
         .btn-book-table {
@@ -120,30 +112,22 @@
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             color: #FFFFFF; padding: 15px 18px; border-radius: 100px; font-weight: 700; text-align: center;
             text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; justify-content: center; gap: 8px;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); transition: all 0.2s ease;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
         }
 
-        .btn-call:active, .btn-book-table:active { transform: scale(0.96); }
-
-        /* Metric Counters */
         .stat-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
             padding-top: 20px; border-top: 1px solid var(--border-luxury);
         }
 
-        .stat-item { text-align: left; }
-        .stat-num {
-            font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-primary); font-weight: 700;
-        }
-        .stat-label {
-            font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
-        }
+        .stat-num { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--gold-primary); font-weight: 700; }
+        .stat-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-        /* Sticky Category Filter Tabs */
+        /* Sticky Navigation Filter */
         .category-filter {
             display: flex; gap: 10px; overflow-x: auto; padding: 16px 22px;
             max-width: 800px; margin: 0 auto; position: sticky; top: 62px; z-index: 90;
-            background: rgba(5, 5, 5, 0.92); backdrop-filter: blur(16px);
+            background: rgba(7, 6, 5, 0.95); backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-luxury); scrollbar-width: none;
         }
 
@@ -151,57 +135,42 @@
 
         .filter-btn {
             background: var(--pill-bg); border: 1px solid var(--border-luxury); color: var(--text-dim);
-            padding: 9px 20px; border-radius: 100px; font-size: 0.8rem; font-weight: 600;
+            padding: 9px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
             white-space: nowrap; text-decoration: none; transition: all 0.3s ease;
         }
 
-        .filter-btn:first-child { 
-            background: linear-gradient(135deg, #FFF0C3 0%, #E5C158 100%); 
+        .filter-btn:hover, .filter-btn:focus {
+            background: linear-gradient(135deg, #FFF2D6 0%, #E6C280 100%); 
             color: #000; border-color: var(--gold-primary); font-weight: 700;
-            box-shadow: 0 4px 12px rgba(229, 193, 88, 0.25);
         }
 
-        /* Menu Display Cards */
+        /* Menu Section */
         .menu-container { max-width: 800px; margin: 0 auto; padding: 10px 22px 40px; }
 
         .category-title {
-            font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-primary);
+            font-family: 'Cinzel', serif; font-size: 1.35rem; color: var(--gold-primary);
             margin: 36px 0 18px; border-bottom: 1px solid var(--border-luxury); padding-bottom: 10px;
-            display: flex; align-items: center; justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between; letter-spacing: 1px;
         }
 
         .menu-card {
             background: var(--bg-card); border: 1px solid var(--border-luxury); border-radius: 16px;
-            padding: 16px 20px; margin-bottom: 14px; display: flex; justify-content: space-between;
+            padding: 16px 20px; margin-bottom: 12px; display: flex; justify-content: space-between;
             align-items: center; backdrop-filter: blur(12px); box-shadow: var(--card-glow);
-            transition: all 0.3s ease;
         }
 
-        .menu-card:hover { border-color: var(--border-glow); }
-
-        .item-info { display: flex; flex-direction: column; gap: 6px; }
-        .item-title { font-size: 0.98rem; font-weight: 600; color: var(--text-white); letter-spacing: 0.2px; }
+        .item-info { display: flex; flex-direction: column; gap: 4px; flex: 1; padding-right: 15px; }
+        .item-title { font-size: 0.95rem; font-weight: 600; color: var(--text-white); }
         .item-badge {
-            font-size: 0.65rem; color: var(--gold-light); 
-            background: linear-gradient(135deg, rgba(229, 193, 88, 0.2) 0%, rgba(154, 123, 44, 0.2) 100%);
-            border: 1px solid var(--border-luxury);
-            padding: 3px 10px; border-radius: 100px; width: fit-content; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
-        }
-        .item-price { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--gold-primary); font-weight: 700; }
-
-        /* Reviews Section */
-        .reviews-container { max-width: 800px; margin: 0 auto; padding: 0 22px 40px; }
-        .reviews-grid { display: flex; flex-direction: column; gap: 16px; }
-
-        .review-card {
-            background: var(--bg-card); border: 1px solid var(--border-luxury); border-radius: 16px;
-            padding: 18px; backdrop-filter: blur(12px); box-shadow: var(--card-glow);
+            font-size: 0.62rem; color: var(--gold-light); 
+            background: rgba(230, 194, 128, 0.15); border: 1px solid var(--border-luxury);
+            padding: 2px 8px; border-radius: 100px; width: fit-content; font-weight: 700; text-transform: uppercase; margin-top: 2px;
         }
 
-        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-        .review-name { font-weight: 700; font-size: 0.88rem; color: var(--text-white); }
-        .stars { color: #FFD700; font-size: 0.8rem; letter-spacing: 2px; }
-        .review-text { color: var(--text-dim); font-size: 0.85rem; line-height: 1.6; font-style: italic; font-weight: 300; }
+        .price-group { display: flex; gap: 14px; align-items: center; }
+        .price-box { text-align: right; }
+        .price-label { font-size: 0.62rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; display: block; }
+        .price-val { font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold-primary); font-weight: 700; }
 
         /* Footer Info */
         footer { max-width: 800px; margin: 0 auto; padding: 0 22px 40px; text-align: center; }
@@ -209,27 +178,22 @@
             background: var(--bg-card); border: 1px solid var(--border-luxury); border-radius: 22px;
             padding: 28px 22px; backdrop-filter: blur(12px); box-shadow: var(--card-glow);
         }
-        .footer-card h3 { 
-            font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--gold-primary); margin-bottom: 10px; 
-        }
-        .footer-card p { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 12px; font-weight: 300; }
+        .footer-card h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; color: var(--gold-primary); margin-bottom: 10px; }
+        .footer-card p { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 10px; font-weight: 300; }
 
         /* Floating Bottom Action Bar */
         .floating-action {
             position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 760px; margin: 0 auto;
-            background: rgba(18, 15, 12, 0.92); backdrop-filter: blur(20px); border: 1px solid var(--border-luxury);
+            background: rgba(18, 14, 11, 0.92); backdrop-filter: blur(20px); border: 1px solid var(--border-luxury);
             border-radius: 100px; padding: 10px 14px 10px 22px; display: flex; justify-content: space-between; align-items: center;
-            z-index: 100; box-shadow: 0 12px 35px rgba(0,0,0,0.8), 0 0 20px rgba(229, 193, 88, 0.15);
+            z-index: 100; box-shadow: 0 12px 35px rgba(0,0,0,0.85);
         }
-        .floating-action span { font-size: 0.85rem; font-weight: 600; color: var(--gold-light); }
+        .floating-action span { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); }
         .floating-btn {
-            background: linear-gradient(135deg, #FFF0C3 0%, #E5C158 50%, #9A7B2C 100%);
+            background: linear-gradient(135deg, #FFF2D6 0%, #E6C280 50%, #A88238 100%);
             color: #000000; padding: 10px 22px; border-radius: 100px;
-            font-size: 0.82rem; font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3); transition: all 0.2s ease;
+            font-size: 0.8rem; font-weight: 800; text-decoration: none; text-transform: uppercase;
         }
-
-        .floating-btn:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
@@ -238,7 +202,7 @@
     <nav>
         <div class="brand-logo">Shan-E-Hyderabad</div>
         <a href="https://maps.app.goo.gl/24XUser538Xep617" target="_blank" class="nav-btn">
-            <i class="fa-solid fa-location-dot" style="color: #E5C158;"></i> Location
+            <i class="fa-solid fa-location-dot" style="color: #E6C280;"></i> Location
         </a>
     </nav>
 
@@ -248,8 +212,8 @@
             <i class="fa-solid fa-crown" style="font-size: 0.75rem;"></i> Ultra Luxury Mughlai Dining
         </div>
         <div class="location-subtitle">Darbhanga • Fine Dining</div>
-        <h1 class="hero-heading">Royal Flavor. <br><em>Authentic Mughlai.</em></h1>
-        <p class="hero-desc">Indulge in rich Hyderabadi spices, slow-cooked royal gravies, and charcoal-grilled authentic tandoori delicacies.</p>
+        <h1 class="hero-heading">Royal Flavors. <br><em>Authentic Mughlai.</em></h1>
+        <p class="hero-desc">Indulge in authentic Hyderabadi recipes, slow-cooked royal gravies, charcoal kebabs, and tandoori specialties.</p>
 
         <!-- Primary CTA Buttons -->
         <div class="cta-group">
@@ -278,85 +242,351 @@
         </div>
     </hero>
 
-    <!-- Sticky Category Filter -->
+    <!-- Sticky Navigation Filter -->
     <div class="category-filter">
-        <a href="#biryani" class="filter-btn">Biryani Specials</a>
-        <a href="#starters" class="filter-btn">Starters</a>
-        <a href="#main" class="filter-btn">Main Course</a>
-        <a href="#breads" class="filter-btn">Roti & Breads</a>
+        <a href="#chicken-mc" class="filter-btn">Chicken Main Course</a>
+        <a href="#mutton-mc" class="filter-btn">Mutton Main Course</a>
+        <a href="#veg-mc" class="filter-btn">Veg Main Course</a>
+        <a href="#tandoor" class="filter-btn">Tandoor & Tikka</a>
+        <a href="#kebabs" class="filter-btn">Kebabs</a>
+        <a href="#nonveg-starters" class="filter-btn">Non-Veg Starters</a>
+        <a href="#rotis" class="filter-btn">Roti & Breads</a>
+        <a href="#rice" class="filter-btn">Rice & Biryani</a>
     </div>
 
-    <!-- Menu Section -->
+    <!-- Complete Menu Section -->
     <div class="menu-container">
         
-        <div id="biryani" class="category-title">
-            <span>Royal Biryani Specials</span>
-            <i class="fa-solid fa-bowl-rice" style="font-size: 1.1rem;"></i>
+        <!-- Chicken Main Course -->
+        <div id="chicken-mc" class="category-title">
+            <span>Chicken Main Course</span>
+            <i class="fa-solid fa-drumstick-bite"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Curry</div></div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹140</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹240</span></div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Masala</div></div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹155</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹270</span></div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Kadai Chicken</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹270</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Butter Chicken</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹290</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Punjabi</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹290</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Do Pyaza</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹290</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Afghani Chicken</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹290</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Tikka Masala</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹310</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Achari Chicken</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹280</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Lajawab Chicken</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹280</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Mughlai</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹280</span></div></div>
         </div>
 
         <div class="menu-card">
             <div class="item-info">
-                <div class="item-title">Shan-E-Hyderabad Special Biryani</div>
-                <div class="item-badge">Royal Bestseller</div>
+                <div class="item-title">Shan-e-Hyderabad Spl. Chicken Masala</div>
+                <div class="item-badge">Chef's Special</div>
             </div>
-            <div class="item-price">₹280</div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹245</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹460</span></div>
+            </div>
+        </div>
+
+        <!-- Mutton Main Course -->
+        <div id="mutton-mc" class="category-title">
+            <span>Mutton Main Course</span>
+            <i class="fa-solid fa-utensils"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mutton Curry</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹340</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mutton Masala</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹350</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mutton Roghan Josh</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹380</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mutton Kadai</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹355</span></div></div>
         </div>
 
         <div class="menu-card">
             <div class="item-info">
-                <div class="item-title">Chicken Dum Biryani (Regular)</div>
+                <div class="item-title">Shan-e-Hyderabad Spl. Mutton</div>
+                <div class="item-badge">Royal Highlight</div>
             </div>
-            <div class="item-price">₹180</div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹390</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹740</span></div>
+            </div>
+        </div>
+
+        <!-- Veg Main Course -->
+        <div id="veg-mc" class="category-title">
+            <span>Veg Main Course</span>
+            <i class="fa-solid fa-leaf" style="color: #25D366;"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mix Veg</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹170</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Mix Veg Curry</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹180</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Gobhi Masala</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹190</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Shahi Paneer</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹220</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Paneer Butter</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹265</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Masala Kadai Paneer</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹220</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Paneer Do Pyaza</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹200</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Paneer Chatpata</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹230</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Daal Fry</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹120</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Daal Tadka</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹130</span></div></div>
+        </div>
+
+        <!-- Tandoor & Tikka -->
+        <div id="tandoor" class="category-title">
+            <span>Tandoor & Tikka</span>
+            <i class="fa-solid fa-fire"></i>
         </div>
 
         <div class="menu-card">
             <div class="item-info">
-                <div class="item-title">Chicken Boneless Biryani</div>
-                <div class="item-badge">Chef Recommendation</div>
+                <div class="item-title">Chicken Tandoori</div>
             </div>
-            <div class="item-price">₹220</div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹230</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹400</span></div>
+            </div>
         </div>
 
         <div class="menu-card">
-            <div class="item-info">
-                <div class="item-title">Chicken Biryani Family Pack</div>
-            </div>
-            <div class="item-price">₹550</div>
+            <div class="item-info"><div class="item-title">Chicken Tikka (6 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹265</span></div></div>
         </div>
 
         <div class="menu-card">
-            <div class="item-info">
-                <div class="item-title">Mutton Biryani (Regular)</div>
-            </div>
-            <div class="item-price">₹240</div>
+            <div class="item-info"><div class="item-title">Chicken Malai Tikka (6 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹275</span></div></div>
         </div>
 
-    </div>
-
-    <!-- Reviews Section -->
-    <div class="reviews-container">
-        <div class="category-title">
-            <span>Guest Experiences</span>
-            <i class="fa-solid fa-star" style="font-size: 1rem;"></i>
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Hariyali Tikka (6 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹250</span></div></div>
         </div>
 
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="review-name">Zaid Khan</span>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="review-text">"Best Hyderabadi Biryani in Darbhanga! Taste, ambience and royal service are top notch."</div>
-            </div>
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Reshmi Tikka (6 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹280</span></div></div>
+        </div>
 
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="review-name">Rahul Verma</span>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="review-text">"Very polite staff and fast service. The fine dining space is exceptionally clean and luxurious."</div>
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Kali Mirch Tikka (6 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹280</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Paneer Tikka</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹250</span></div></div>
+        </div>
+
+        <!-- Kebabs -->
+        <div id="kebabs" class="category-title">
+            <span>Kebabs</span>
+            <i class="fa-solid fa-stroopwafel"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Tangdi Kebab (2 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹200</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Garlic Tangdi Kebab (2 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹210</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Seekh Kebab (2 Pcs)</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹210</span></div></div>
+        </div>
+
+        <!-- Non-Veg Starters -->
+        <div id="nonveg-starters" class="category-title">
+            <span>Non-Veg Starters</span>
+            <i class="fa-solid fa-pepper-hot"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken 65</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹240</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Chilli</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹240</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Chicken Lollipop</div></div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half (3 Pcs)</span><span class="price-val">₹190</span></div>
+                <div class="price-box"><span class="price-label">Full (6 Pcs)</span><span class="price-val">₹280</span></div>
             </div>
         </div>
+
+        <!-- Roti & Breads -->
+        <div id="rotis" class="category-title">
+            <span>Roti & Breads</span>
+            <i class="fa-solid fa-bread-slice"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Tandoori Roti</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹15</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Tandoori Butter Roti</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹20</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Tandoori Naan</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹35</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Butter Naan</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹45</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Paneer Naan</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹60</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Garlic Naan</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Price</span><span class="price-val">₹55</span></div></div>
+        </div>
+
+        <!-- Rice & Biryani -->
+        <div id="rice" class="category-title">
+            <span>Rice & Biryani</span>
+            <i class="fa-solid fa-bowl-rice"></i>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Steam Rice</div></div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹50</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹90</span></div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Jeera Rice</div></div>
+            <div class="price-group">
+                <div class="price-box"><span class="price-label">Half</span><span class="price-val">₹60</span></div>
+                <div class="price-box"><span class="price-label">Full</span><span class="price-val">₹100</span></div>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Lemon Rice</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹100</span></div></div>
+        </div>
+
+        <div class="menu-card">
+            <div class="item-info"><div class="item-title">Veg Schezwan Fried Rice</div></div>
+            <div class="price-group"><div class="price-box"><span class="price-label">Full</span><span class="price-val">₹160</span></div></div>
+        </div>
+
     </div>
 
     <!-- Footer Area -->
@@ -369,11 +599,11 @@
         </div>
     </footer>
 
-    <!-- Floating Bottom Action Bar -->
+    <!-- Floating Action Bar -->
     <div class="floating-action">
         <span>Experience Fine Dining</span>
         <a href="https://wa.me/919102016888?text=Hi,%20I%20want%20to%20book%20a%20table" class="floating-btn" target="_blank">Book Table</a>
     </div>
 
 </body>
-</html>
+                                                                </html>
