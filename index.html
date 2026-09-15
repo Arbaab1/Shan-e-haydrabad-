@@ -7,58 +7,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --bg-main: #0D0B09;
-            --bg-card: rgba(28, 24, 21, 0.75);
-            --bronze-gold: #D4A359;
+            --bg-main: #0a0a0a;
+            --bg-card: rgba(20, 17, 15, 0.75);
+            --bronze-gold: #D4AF37;
             --bronze-light: #F0C987;
-            --text-white: #FAF6F0;
-            --text-dim: #A69D92;
-            --border-dark: rgba(212, 163, 89, 0.2);
+            --text-white: #FAF0E6;
+            --text-dim: #A6A092;
+            --border-dark: rgba(212, 175, 55, 0.23);
             --pill-bg: rgba(20, 17, 15, 0.85);
             --accent-green: #25D366;
-            --glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --accent-blue: #007AFF;
+            --glow: 0px 12px 9px rgba(0, 0, 0, 0.37);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-main); color: var(--text-white); -webkit-font-smoothing: antialiased; padding-bottom: 70px; }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            background-color: var(--bg-main); 
+            color: var(--text-white); 
+            -webkit-font-smoothing: antialiased; 
+            padding-bottom: 90px;
+        }
 
         /* Floating Top Bar */
         nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 16px 20px; max-width: 800px; margin: 0 auto;
+            padding: 15px 20px; max-width: 800px; margin: 0 auto;
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(13, 11, 9, 0.8); backdrop-filter: blur(12px);
+            background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-dark);
         }
+
         .brand-logo {
             font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
             color: var(--bronze-gold); text-transform: uppercase; letter-spacing: 1px;
         }
+
         .nav-btn {
             background: var(--pill-bg); border: 1px solid var(--border-dark); color: var(--text-white);
-            padding: 6px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+            padding: 6px 14px; border-radius: 100px; font-size: 0.78rem; font-weight: 500;
             text-decoration: none; display: flex; align-items: center; gap: 6px;
         }
 
         /* Hero Section */
-        .hero {
+        hero {
             position: relative; min-height: 85vh;
             display: flex; flex-direction: column; justify-content: flex-end;
             padding: 120px 20px 40px; max-width: 800px; margin: 0 auto;
-            background: linear-gradient(180deg, rgba(13,11,9,0.3) 0%, rgba(13,11,9,0.9) 75%, #0D0B09 100%), 
+            background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.9) 75%, #0A0A0A 100%),
                         url('Image1.jpg.png') center/cover no-repeat;
             border-bottom: 1px solid var(--border-dark);
         }
-        
+
         .welcome-badge {
             display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(212, 163, 89, 0.12); border: 1px solid var(--bronze-gold);
-            color: var(--bronze-light); padding: 6px 16px; border-radius: 100px; font-size: 0.78rem;
-            margin-bottom: 14px; font-weight: 600; width: fit-content; backdrop-filter: blur(8px);
+            background: rgba(212, 175, 55, 0.12); border: 1px solid var(--bronze-gold);
+            color: var(--bronze-light); padding: 5px 12px; border-radius: 100px; font-size: 0.75rem;
+            margin-bottom: 12px; font-weight: 600; width: fit-content; backdrop-filter: blur(5px);
         }
 
         .location-subtitle {
@@ -70,93 +83,106 @@
             font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700;
             line-height: 1.15; margin-bottom: 12px; color: var(--text-white);
         }
+
         .hero-heading em { font-style: italic; color: var(--bronze-gold); font-weight: 600; }
 
         .hero-desc {
-            color: var(--text-dim); font-size: 0.88rem; line-height: 1.6;
-            margin-bottom: 24px; max-width: 95%;
+            color: var(--text-dim); font-size: 0.9rem; line-height: 1.5;
+            margin-bottom: 24px; max-width: 90%;
         }
 
         /* Hero CTA Buttons */
-        .cta-group { display: flex; gap: 10px; margin-bottom: 30px; }
-        
-        .btn-primary {
-            flex: 1; background: linear-gradient(135deg, #D4A359 0%, #B88539 100%); color: #0D0B09; 
-            padding: 14px 16px; border-radius: 100px; font-weight: 700; text-align: center; 
-            text-decoration: none; font-size: 0.88rem; box-shadow: 0 4px 20px rgba(212, 163, 89, 0.25);
-            display: flex; align-items: center; justify-content: center;
+        .cta-group { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+
+        .btn-call {
+            flex: 1; min-width: 130px; background: #007AFF; color: #FFFFFF;
+            padding: 14px 16px; border-radius: 100px; font-weight: 700; text-align: center;
+            text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; justify-content: center; gap: 8px;
         }
-        
+
         .btn-whatsapp {
-            flex: 1; background: var(--accent-green); color: #fff; padding: 14px 16px; border-radius: 100px;
-            font-weight: 700; text-align: center; text-decoration: none; font-size: 0.88rem;
-            display: flex; align-items: center; justify-content: center; gap: 6px;
+            flex: 1; min-width: 130px; background: var(--accent-green); color: #FFF;
+            padding: 14px 16px; border-radius: 100px; font-weight: 700; text-align: center;
+            text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; justify-content: center; gap: 8px;
         }
 
         /* Metric Counters */
-        .stats-grid {
+        .stat-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-            padding-top: 16px; border-top: 1px solid var(--border-dark);
+            padding-top: 18px; border-top: 1px solid var(--border-dark);
         }
+
         .stat-item { text-align: left; }
-        .stat-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--bronze-gold); font-weight: 700; }
-        .stat-label { font-size: 0.62rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .stat-num {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--bronze-gold); font-weight: 700;
+        }
+        .stat-label {
+            font-size: 0.62rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+        }
 
         /* Sticky Category Filter Tabs */
         .category-filter {
             display: flex; gap: 8px; overflow-x: auto; padding: 14px 20px;
             max-width: 800px; margin: 0 auto; position: sticky; top: 62px; z-index: 90;
-            background: rgba(13, 11, 9, 0.95); backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-dark); scrollbar-width: none;
         }
+
         .category-filter::-webkit-scrollbar { display: none; }
+
         .filter-btn {
             background: var(--pill-bg); border: 1px solid var(--border-dark); color: var(--text-dim);
-            padding: 8px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
+            padding: 8px 18px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
             white-space: nowrap; text-decoration: none; transition: 0.2s ease;
         }
-        .filter-btn:first-child { background: var(--bronze-gold); color: #0D0B09; border-color: var(--bronze-gold); }
+
+        .filter-btn:first-child { background: var(--bronze-gold); color: #000; border-color: var(--bronze-gold); }
 
         /* Menu Display Cards */
         .menu-container { max-width: 800px; margin: 0 auto; padding: 10px 20px 40px; }
+
         .category-title {
             font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--bronze-gold);
-            margin: 32px 0 16px; border-bottom: 1px solid var(--border-dark); padding-bottom: 8px;
+            margin: 30px 0 16px; border-bottom: 1px solid var(--border-dark); padding-bottom: 8px;
             display: flex; align-items: center; justify-content: space-between;
         }
 
         .menu-card {
             background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 14px;
-            padding: 16px 18px; margin-bottom: 12px; display: flex; justify-content: space-between; 
+            padding: 14px 16px; margin-bottom: 12px; display: flex; justify-content: space-between;
             align-items: center; backdrop-filter: blur(10px); box-shadow: var(--glow);
         }
+
         .item-info { display: flex; flex-direction: column; gap: 4px; }
         .item-title { font-size: 0.95rem; font-weight: 600; color: var(--text-white); }
         .item-badge {
-            font-size: 0.65rem; color: #D4A359; background: rgba(212, 163, 89, 0.1);
+            font-size: 0.65rem; color: #D4AF37; background: rgba(212, 175, 55, 0.1);
             padding: 2px 8px; border-radius: 100px; width: fit-content; font-weight: 600;
         }
-        .item-price { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bronze-gold); font-weight: 700; text-align: right; }
+        .item-price { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bronze-gold); font-weight: 700; }
 
         /* Reviews Section */
         .reviews-container { max-width: 800px; margin: 0 auto; padding: 0 20px 40px; }
         .reviews-grid { display: flex; flex-direction: column; gap: 14px; }
+
         .review-card {
-            background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 16px;
-            padding: 18px; backdrop-filter: blur(10px);
+            background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 14px;
+            padding: 16px; backdrop-filter: blur(10px);
         }
-        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .reviewer-name { font-weight: 600; font-size: 0.9rem; color: var(--text-white); }
+
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .review-name { font-weight: 600; font-size: 0.85rem; color: var(--text-white); }
         .stars { color: #FFC107; font-size: 0.75rem; }
-        .review-text { color: var(--text-dim); font-size: 0.83rem; line-height: 1.5; font-style: italic; }
+        .review-text { color: var(--text-dim); font-size: 0.82rem; line-height: 1.5; font-style: italic; }
 
         /* Footer Info */
+        footer { max-width: 800px; margin: 0 auto; padding: 0 20px 40px; text-align: center; }
         .footer-card {
             background: var(--bg-card); border: 1px solid var(--border-dark); border-radius: 20px;
-            padding: 24px 20px; text-align: center; margin-top: 20px;
+            padding: 24px 20px;
         }
-        .footer-card h3 { font-family: 'Playfair Display', serif; color: var(--bronze-gold); margin-bottom: 6px; font-size: 1.3rem; }
-        .footer-card p { color: var(--text-dim); font-size: 0.82rem; margin-bottom: 16px; }
+        .footer-card h3 { font-family: 'Playfair Display', serif; color: var(--bronze-gold); margin-bottom: 8px; }
+        .footer-card p { color: var(--text-dim); font-size: 0.82rem; margin-bottom: 12px; }
 
         /* Floating Bottom Action Bar */
         .floating-action {
@@ -167,7 +193,7 @@
         }
         .floating-action span { font-size: 0.8rem; font-weight: 600; color: var(--bronze-light); }
         .floating-btn {
-            background: var(--bronze-gold); color: #0D0B09; padding: 8px 18px; border-radius: 100px;
+            background: var(--bronze-gold); color: #000000; padding: 8px 18px; border-radius: 100px;
             font-size: 0.8rem; font-weight: 700; text-decoration: none;
         }
     </style>
@@ -177,171 +203,142 @@
     <!-- Header Navigation -->
     <nav>
         <div class="brand-logo">Shan-E-Hyderabad</div>
-        <a href="https://maps.app.goo.gl/24XjUser53XAmp5i7" target="_blank" class="nav-btn">
+        <a href="https://maps.app.goo.gl/24XUser538Xep617" target="_blank" class="nav-btn">
             <i class="fa-solid fa-location-dot" style="color: #e74c3c;"></i> Location
         </a>
     </nav>
 
     <!-- Hero Area -->
-    <div class="hero">
+    <hero>
         <div class="welcome-badge">
             <i class="fa-solid fa-crown" style="font-size: 0.7rem;"></i> Luxury Mughlai Dining
         </div>
         <div class="location-subtitle">Darbhanga • Fine Dining</div>
-        
-        <h1 class="hero-heading">Royal Flavor. <br>Authentic <em>Mughlai.</em></h1>
-        
-        <p class="hero-desc">Experience rich Hyderabadi spices, slow-cooked gravies, and charcoal-grilled tandoori delicacies served with royal hospitality.</p>
+        <h1 class="hero-heading">Royal Flavor. <em>Authentic Mughlai.</em></h1>
+        <p class="hero-desc">Experience rich Hyderabadi spices, slow-cooked gravies, and charcoal-grilled tandoori delicacies.</p>
 
         <!-- Primary CTA Buttons -->
         <div class="cta-group">
-            <a href="#full-menu" class="btn-primary">Explore Menu</a>
-            <a href="https://wa.me/?text=Hi%20Shan-e-Hyderabad,%20I%20want%20to%20book%20a%20table." class="btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp" style="font-size: 1rem;"></i> Book Table
+            <a href="tel:9102015888" class="btn-call">
+                <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+            <a href="https://wa.me/919102016888?text=Hello%20Shan-E-Hyderabad,%20I%20want%20to%20book%20a%20table/order" class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
             </a>
         </div>
 
-        <!-- Metrics Bar -->
-        <div class="stats-grid">
+        <!-- Metric Counters -->
+        <div class="stat-grid">
             <div class="stat-item">
-                <div class="stat-num">₹15</div>
-                <div class="stat-label">STARTING</div>
+                <div class="stat-num">4.8★</div>
+                <div class="stat-label">Rating</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num">40+</div>
-                <div class="stat-label">DELICACIES</div>
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Authentic</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num">4.8 ★</div>
-                <div class="stat-label">RATING</div>
+                <div class="stat-num">Fresh</div>
+                <div class="stat-label">Hygiene</div>
             </div>
         </div>
-    </div>
+    </hero>
 
-    <!-- Quick Navigation Filters -->
+    <!-- Sticky Category Filter -->
     <div class="category-filter">
-        <a href="#specials" class="filter-btn">⭐ Specials</a>
-        <a href="#chicken" class="filter-btn">🍗 Chicken</a>
-        <a href="#tandoori" class="filter-btn">🔥 Tandoori</a>
-        <a href="#mutton" class="filter-btn">🥩 Mutton</a>
-        <a href="#veg" class="filter-btn">🥗 Veg</a>
-        <a href="#breads" class="filter-btn">🫓 Breads</a>
-        <a href="#reviews" class="filter-btn">💬 Reviews</a>
+        <a href="#biryani" class="filter-btn">Biryani</a>
+        <a href="#starter" class="filter-btn">Starters</a>
+        <a href="#main" class="filter-btn">Main Course</a>
+        <a href="#breads" class="filter-btn">Roti & Breads</a>
     </div>
 
     <!-- Menu Section -->
-    <div class="menu-container" id="full-menu">
-
-        <!-- House Specials -->
-        <div class="category-title" id="specials">⭐ Chef's Specials</div>
-        <div class="menu-card">
-            <div class="item-info">
-                <span class="item-title">Shan-e-Hyderabadi Spl. Chicken Masala</span>
-                <span class="item-badge">Bestseller</span>
-            </div>
-            <span class="item-price">Half ₹345 / Full ₹660</span>
-        </div>
-        <div class="menu-card">
-            <div class="item-info">
-                <span class="item-title">Shan-e-Hyderabadi Spl. Mutton</span>
-                <span class="item-badge">Chef Choice</span>
-            </div>
-            <span class="item-price">Half ₹390 / Full ₹760</span>
-        </div>
-        <div class="menu-card">
-            <div class="item-info">
-                <span class="item-title">Non-Veg Platter</span>
-                <span class="item-badge">Royal Feast</span>
-            </div>
-            <span class="item-price">₹450</span>
+    <div class="menu-container">
+        
+        <div id="biryani" class="category-title">
+            <span>Biryani Specials</span>
+            <i class="fa-solid fa-bowl-rice" style="font-size: 1rem;"></i>
         </div>
 
-        <!-- Chicken Main Course -->
-        <div class="category-title" id="chicken">🍗 Chicken Main Course</div>
-        <div class="menu-card"><span class="item-title">Chicken Curry</span><span class="item-price">Half ₹140 / Full ₹249</span></div>
-        <div class="menu-card"><span class="item-title">Chicken Masala</span><span class="item-price">Half ₹155 / Full ₹259</span></div>
-        <div class="menu-card"><span class="item-title">Kadai Chicken</span><span class="item-price">₹255</span></div>
-        <div class="menu-card"><span class="item-title">Butter Chicken</span><span class="item-price">₹299</span></div>
-        <div class="menu-card"><span class="item-title">Chicken Punjabi</span><span class="item-price">₹299</span></div>
-        <div class="menu-card"><span class="item-title">Afghani Chicken</span><span class="item-price">₹299</span></div>
-        <div class="menu-card"><span class="item-title">Chicken Tikka Masala</span><span class="item-price">₹289</span></div>
+        <div class="menu-card">
+            <div class="item-info">
+                <div class="item-title">Shan-E-Hyderabad Special Biryani</div>
+                <div class="item-badge">Bestseller</div>
+            </div>
+            <div class="item-price">₹280</div>
+        </div>
 
-        <!-- Tandoori & Tikka -->
-        <div class="category-title" id="tandoori">🔥 Tandoori & Tikka</div>
-        <div class="menu-card"><span class="item-title">Chicken Tandoori</span><span class="item-price">Half ₹230 / Full ₹400</span></div>
-        <div class="menu-card"><span class="item-title">Chicken Tikka (8pcs)</span><span class="item-price">₹249</span></div>
-        <div class="menu-card"><span class="item-title">Chicken Malai Tikka (8pcs)</span><span class="item-price">₹259</span></div>
-        <div class="menu-card"><span class="item-title">Haryali Tikka (8pcs)</span><span class="item-price">₹279</span></div>
-        <div class="menu-card"><span class="item-title">Reshmi Tikka (8pcs)</span><span class="item-price">₹289</span></div>
+        <div class="menu-card">
+            <div class="item-info">
+                <div class="item-title">Chicken Dum Biryani (Regular)</div>
+            </div>
+            <div class="item-price">₹180</div>
+        </div>
 
-        <!-- Mutton Main Course -->
-        <div class="category-title" id="mutton">🥩 Mutton Main Course</div>
-        <div class="menu-card"><span class="item-title">Mutton Curry</span><span class="item-price">₹340</span></div>
-        <div class="menu-card"><span class="item-title">Mutton Masala</span><span class="item-price">₹350</span></div>
-        <div class="menu-card"><span class="item-title">Mutton Roghan Josh</span><span class="item-price">₹380</span></div>
+        <div class="menu-card">
+            <div class="item-info">
+                <div class="item-title">Chicken Boneless Biryani</div>
+                <div class="item-badge">Chef Choice</div>
+            </div>
+            <div class="item-price">₹220</div>
+        </div>
 
-        <!-- Veg Selection -->
-        <div class="category-title" id="veg">🥗 Veg Selection</div>
-        <div class="menu-card"><span class="item-title">Shahi Paneer</span><span class="item-price">₹220</span></div>
-        <div class="menu-card"><span class="item-title">Paneer Butter Masala</span><span class="item-price">₹265</span></div>
-        <div class="menu-card"><span class="item-title">Daal Tadka</span><span class="item-price">₹130</span></div>
+        <div class="menu-card">
+            <div class="item-info">
+                <div class="item-title">Chicken Biryani Family Pack</div>
+            </div>
+            <div class="item-price">₹550</div>
+        </div>
 
-        <!-- Breads & Rice -->
-        <div class="category-title" id="breads">🫓 Breads & Rice</div>
-        <div class="menu-card"><span class="item-title">Tandoori Butter Roti</span><span class="item-price">₹20</span></div>
-        <div class="menu-card"><span class="item-title">Butter Naan</span><span class="item-price">₹45</span></div>
-        <div class="menu-card"><span class="item-title">Garlic Naan</span><span class="item-price">₹55</span></div>
-        <div class="menu-card"><span class="item-title">Jeera Rice</span><span class="item-price">Half ₹60 / Full ₹100</span></div>
+        <div class="menu-card">
+            <div class="item-info">
+                <div class="item-title">Mutton Biryani (Regular)</div>
+            </div>
+            <div class="item-price">₹240</div>
+        </div>
 
     </div>
 
-    <!-- Customer Reviews Section -->
-    <div class="reviews-container" id="reviews">
-        <div class="category-title">💬 Guest Experiences</div>
+    <!-- Reviews Section -->
+    <div class="reviews-container">
+        <div class="category-title">
+            <span>Guest Experiences</span>
+            <i class="fa-solid fa-star" style="font-size: 1rem;"></i>
+        </div>
+
         <div class="reviews-grid">
-            
             <div class="review-card">
                 <div class="review-header">
-                    <span class="reviewer-name">Mohd. Tariq</span>
+                    <span class="review-name">Zaid Khan</span>
                     <div class="stars">★★★★★</div>
                 </div>
-                <p class="review-text">"Darbhanga me best Hyderabadi flavor! Inka Special Mutton aur Butter Naan unbeatable hai. Ambience aur service dono super premium hain."</p>
+                <div class="review-text">"Best Hyderabadi Biryani in Darbhanga! Taste and ambience are top notch."</div>
             </div>
 
             <div class="review-card">
                 <div class="review-header">
-                    <span class="reviewer-name">Rahul Sharma</span>
+                    <span class="review-name">Rahul Verma</span>
                     <div class="stars">★★★★★</div>
                 </div>
-                <p class="review-text">"Malai Tikka exact restaurant style juicy aur tender tha. Family dining ke liye Darbhanga ka sabse accha option."</p>
+                <div class="review-text">"Very polite staff and fast service. Family dining place is clean and luxurious."</div>
             </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="reviewer-name">Dr. A. K. Verma</span>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <p class="review-text">"Authentic Mughlai taste, quick service aur clean presentation. Unke online menu book karne se hamara table pehle hi ready tha."</p>
-            </div>
-
-        </div>
-
-        <!-- Footer Card -->
-        <div class="footer-card">
-            <h3>Shan-e-Hyderabad</h3>
-            <p>Darbhanga, Bihar • Fine Mughlai Dining</p>
-            <a href="https://maps.app.goo.gl/24XjUser53XAmp5i7" target="_blank" class="nav-btn" style="display: inline-flex;">
-                📍 Open in Google Maps
-            </a>
         </div>
     </div>
 
-    <!-- Sticky Bottom Quick Action Bar -->
+    <!-- Footer Area -->
+    <footer>
+        <div class="footer-card">
+            <h3>Shan-E-Hyderabad</h3>
+            <p>Raham Khan, Near Tower, Laheriasarai, Darbhanga</p>
+            <p><i class="fa-solid fa-envelope"></i> shanehyderabad25@gmail.com</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Bar -->
     <div class="floating-action">
-        <span>📍 Shan-e-Hyderabad</span>
-        <a href="https://wa.me/?text=Hi%20Shan-e-Hyderabad,%20I%20want%20to%20reserve%20a%20table." class="floating-btn" target="_blank">Book Table Now</a>
+        <span>Reserve Table / Order</span>
+        <a href="https://wa.me/919102016888?text=Hi,%20I%20want%20to%20book%20a%20table" class="floating-btn" target="_blank">Book Table</a>
     </div>
 
 </body>
-            </html>
-            
+</html>
